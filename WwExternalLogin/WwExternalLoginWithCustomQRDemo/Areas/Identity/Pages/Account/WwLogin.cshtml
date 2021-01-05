@@ -1,0 +1,26 @@
+﻿@page
+@model WwLoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+    Layout = null;
+}
+
+<html>
+<head>
+</head>
+<body>
+    <div id="code-img" style="width:400px;height:250px"></div>
+    <script src="http://rescdn.qqmail.com/node/ww/wwopenmng/js/sso/wwLogin-1.0.0.js"></script>
+    <script>
+        window.WwLogin({
+            id: "code-img",
+            appid: "@Model.AppId",
+            agentid: "@Model.AgentId",
+            state: "@Model.State",
+            redirect_uri: encodeURIComponent("@Model.RedirectUri")
+        });
+    </script>
+</body>
+</html>
+

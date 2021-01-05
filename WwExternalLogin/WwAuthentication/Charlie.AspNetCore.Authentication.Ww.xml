@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Charlie.AspNetCore.Authentication.Ww</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Extensions.DependencyInjection.WwClaimTypes">
+            <summary>
+            微信特有的 Claim
+            </summary>
+        </member>
+        <member name="F:Microsoft.Extensions.DependencyInjection.WwClaimTypes.Position">
+            <summary>
+            职位信息
+            </summary>
+        </member>
+        <member name="T:Microsoft.Extensions.DependencyInjection.WwExternalLoginMiddlewareExtension">
+            <summary>
+            微信企业版外部登录扩展
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.WwExternalLoginMiddlewareExtension.AddWw(Microsoft.AspNetCore.Authentication.AuthenticationBuilder,System.Action{Microsoft.Extensions.DependencyInjection.WwOptions})">
+            <summary>
+            提供微信企业版外部登陆
+            </summary>
+            <param name="builder"></param>
+            <param name="configureOptions"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Extensions.DependencyInjection.WwHandler">
+            <summary>
+            Ww External Login Hanlder
+            </summary>
+            <see cref="!:https://work.weixin.qq.com/api/doc/90000/90135/90988"/>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.WwHandler.ExchangeCodeAsync(Microsoft.AspNetCore.Authentication.OAuth.OAuthCodeExchangeContext)">
+            <summary>
+            获取微信的 access token，实际上不需要使用 Code
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Extensions.DependencyInjection.WwOptions">
+            <summary>
+            微信企业版 外部登录选项
+            </summary>
+        </member>
+        <member name="P:Microsoft.Extensions.DependencyInjection.WwOptions.AgentId">
+            <summary>
+            授权方的网页应用ID
+            </summary>
+        </member>
+        <member name="P:Microsoft.Extensions.DependencyInjection.WwUserInfoDto.UserId">
+            <summary>
+            成员UserID
+            </summary>
+        </member>
+        <member name="P:Microsoft.Extensions.DependencyInjection.WwUserInfoDto.Errcode">
+            <summary>
+            返回码
+            </summary>
+        </member>
+        <member name="P:Microsoft.Extensions.DependencyInjection.WwUserInfoDto.Errmsg">
+            <summary>
+            对返回码的文本描述内容
+            </summary>
+        </member>
+        <member name="P:Microsoft.Extensions.DependencyInjection.WwUserDto.Mobile">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:Microsoft.Extensions.DependencyInjection.WwUserDto.Name">
+            <summary>
+            员工名字
+            </summary>
+        </member>
+        <member name="P:Microsoft.Extensions.DependencyInjection.WwUserDto.Telephone">
+            <summary>
+            座机
+            </summary>
+        </member>
+        <member name="P:Microsoft.Extensions.DependencyInjection.WwUserDto.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:Microsoft.Extensions.DependencyInjection.WwUserDto.Userid">
+            <summary>
+            员工在当前企业内的唯一标识，也称staffId。可由企业在创建时指定，并代表一定含义比如工号，创建后不可修改
+            </summary>
+        </member>
+        <member name="P:Microsoft.Extensions.DependencyInjection.WwUserDto.Position">
+            <summary>
+            职位信息
+            </summary>
+        </member>
+        <member name="P:Microsoft.Extensions.DependencyInjection.WwUserDto.Status">
+            <summary>
+            激活状态: 1=已激活，2=已禁用，4=未激活，5=退出企业。已激活代表已激活企业微信或已关注微工作台（原企业号）。未激活代表既未激活企业微信又未关注微工作台（原企业号）。
+            </summary>
+        </member>
+        <member name="P:Microsoft.Extensions.DependencyInjection.WwUserDto.Avatar">
+            <summary>
+            头像url
+            </summary>
+        </member>
+        <member name="P:Microsoft.Extensions.DependencyInjection.WwUserDto.Department">
+            <summary>
+            成员所属部门id列表
+            </summary>
+        </member>
+        <member name="P:Microsoft.Extensions.DependencyInjection.WwUserDto.Main_department">
+            <summary>
+            主部门
+            </summary>
+        </member>
+        <member name="P:Microsoft.Extensions.DependencyInjection.WwUserDto.Email">
+            <summary>
+            员工的电子邮箱
+            </summary>
+        </member>
+        <member name="P:Microsoft.Extensions.DependencyInjection.WwUserDto.Errcode">
+            <summary>
+            返回码
+            </summary>
+        </member>
+        <member name="P:Microsoft.Extensions.DependencyInjection.WwUserDto.Errmsg">
+            <summary>
+            对返回码的文本描述内容
+            </summary>
+        </member>
+        <member name="P:Microsoft.Extensions.DependencyInjection.WwUserDto.Extattr">
+            <summary>
+            扩展属性，第三方仅通讯录应用可获取；对于非第三方创建的成员，第三方通讯录应用也不可获取
+            </summary>
+        </member>
+        <member name="P:Microsoft.Extensions.DependencyInjection.WwUserDto.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+    </members>
+</doc>
