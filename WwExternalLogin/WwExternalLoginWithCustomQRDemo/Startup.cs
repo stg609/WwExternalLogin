@@ -38,7 +38,7 @@ namespace WwExternalLoginWithCustomQRDemo
 
             var wwOpts = Configuration.GetSection("WwOptions").Get<WwOptions>();
 
-            // Ìí¼Ó ¶¤¶¤ µÇÂ½
+            // Ìí¼Ó ÆóÒµÎ¢ÐÅ µÇÂ½
             services.AddAuthentication().AddWw(opts =>
             {
                 opts.ClientId = wwOpts.ClientId;
