@@ -69,7 +69,7 @@
                                 </p>
                             </div>
                         </form>
-                        <iframe name="ifmWw" scrolling="no" style="width:450px;height:400px" onload="redirectToParent(this)">
+                        <iframe id="ifmWw" name="ifmWw" scrolling="no" style="width:450px;height:400px" onload="redirectToParent(this)">
                         </iframe>
                     </div>
                 }
@@ -84,7 +84,8 @@
         $("#wwLoginBtn").click();
 
         function redirectToParent(e) {
-            if (e.contentWindow.location.href.indexOf("/WwLogin")==-1) {
+            if (e.contentWindow.location.href.indexOf("/WwLogin") == -1) {
+                $("#ifmWw").hide();
                 window.top.location.href = e.contentWindow.location;
                 return false;
             }

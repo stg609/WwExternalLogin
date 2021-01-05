@@ -92,14 +92,14 @@ namespace Microsoft.Extensions.DependencyInjection
             var userInfoResponse = await Backchannel.SendAsync(userInfoRequest, Context.RequestAborted);
             if (!userInfoResponse.IsSuccessStatusCode)
             {
-                throw new HttpRequestException($"An error occurred when retrieving Dingtalk user information ({userInfoResponse.StatusCode}).");
+                throw new HttpRequestException($"An error occurred when retrieving user information ({userInfoResponse.StatusCode}).");
             }
 
             string rawResp = await userInfoResponse.Content.ReadAsStringAsync();
             var wwUserInfo = JsonSerializer.Deserialize<WwUserInfoDto>(rawResp, _serializerOpts);
             if (wwUserInfo.Errcode != 0)
             {
-                throw new HttpRequestException($"An error occurred when retrieving Dingtalk user information ({wwUserInfo.Errmsg}).");
+                throw new HttpRequestException($"An error occurred when retrieving user information ({wwUserInfo.Errmsg}).");
             }
 
             // 获取成员信息
@@ -110,7 +110,7 @@ namespace Microsoft.Extensions.DependencyInjection
             var response = await Backchannel.SendAsync(request, Context.RequestAborted);
             if (!response.IsSuccessStatusCode)
             {
-                throw new HttpRequestException($"An error occurred when retrieving Dingtalk user information ({userInfoResponse.StatusCode}).");
+                throw new HttpRequestException($"An error occurred when retrieving user information ({userInfoResponse.StatusCode}).");
             }
 
             string rawPayload = await response.Content.ReadAsStringAsync();

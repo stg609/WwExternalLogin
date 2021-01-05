@@ -39,8 +39,6 @@ namespace WwExternalLoginDemo
                 opts.ClientSecret = wwOpts.ClientSecret;
 
                 opts.AgentId = wwOpts.AgentId;
-
-                opts.SignInScheme = IdentityConstants.ExternalScheme;
             });
 
             services.AddControllersWithViews();

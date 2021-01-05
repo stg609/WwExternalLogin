@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using WwExternalLoginWithCustomQRDemo.Models;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Microsoft.AspNetCore.Authorization;
+using WwExternalLoginWithCustomQRDemo.Models;
 
 namespace WwExternalLoginWithCustomQRDemo.Controllers
 {
@@ -24,7 +19,6 @@ namespace WwExternalLoginWithCustomQRDemo.Controllers
             return View();
         }
 
-        [Authorize]
         public IActionResult Privacy()
         {
             return View();

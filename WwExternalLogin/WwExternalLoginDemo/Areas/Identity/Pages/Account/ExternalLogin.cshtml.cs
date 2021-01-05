@@ -132,7 +132,7 @@ namespace WwExternalLoginDemo.Areas.Identity.Pages.Account
                     {
                         _logger.LogInformation("User created an account using {Name} provider.", info.LoginProvider);
 
-                        // 增加来自于 Ww 的额外的 claim
+                        // 增加来自于 企业微信 的额外的 claim
                         await _userManager.AddClaimsAsync(user, info.Principal.Claims);
 
                         var userId = await _userManager.GetUserIdAsync(user);
