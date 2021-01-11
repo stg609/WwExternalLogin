@@ -27,6 +27,15 @@
             <param name="configureOptions"></param>
             <returns></returns>
         </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.WwExternalLoginMiddlewareExtension.AddWw(Microsoft.AspNetCore.Authentication.AuthenticationBuilder,System.String,System.Action{Microsoft.Extensions.DependencyInjection.WwOptions})">
+            <summary>
+            提供微信企业版外部登陆
+            </summary>
+            <param name="builder"></param>
+            <param name="displayName">显示的名称</param>
+            <param name="configureOptions"></param>
+            <returns></returns>
+        </member>
         <member name="T:Microsoft.Extensions.DependencyInjection.WwHandler">
             <summary>
             Ww External Login Hanlder
